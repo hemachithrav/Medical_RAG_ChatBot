@@ -4,10 +4,9 @@ from src.prompt import *
 import os
 from dotenv import load_dotenv
 from langchain_community.document_loaders import PyPDFLoader,DirectoryLoader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from typing import List
-from langchain.schema import Document
+from langchain_core.documents import Document
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain.chains import create_retrieval_chain
